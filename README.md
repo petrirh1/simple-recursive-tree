@@ -22,6 +22,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [GitHub Pages](https://pages.github.com/) via `gh-pages`
 
 ---
 
@@ -53,6 +54,30 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and `
    ```
 
 4. Open your browser at the local URL provided by Vite (typically `http://localhost:5173`).
+
+---
+
+## 🌐 Deployment
+
+To build and deploy the application to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+This runs `predeploy` (`npm run build`) to type-check and generate production assets in the `dist` directory, then publishes the build to the `gh-pages` branch using `gh-pages`.
+
+---
+
+## 📜 Available Scripts
+
+| Command           | Description                                                 |
+| :---------------- | :---------------------------------------------------------- |
+| `npm run dev`     | Starts the Vite development server with host access enabled |
+| `npm run build`   | Runs TypeScript checks and builds the production bundle     |
+| `npm run preview` | Locally previews the production build                       |
+| `npm run lint`    | Lints source files using ESLint                             |
+| `npm run deploy`  | Builds the project and deploys it to GitHub Pages           |
 
 ---
 
