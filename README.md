@@ -86,7 +86,7 @@ This runs `predeploy` (`npm run build`) to type-check and generate production as
 ```tsx
 import FileTree, { Item } from './components/ui/file-tree';
 
-const fileStructure: Item[] = [
+const items: Item[] = [
 	{
 		name: 'src',
 		type: 'folder',
@@ -106,7 +106,7 @@ const fileStructure: Item[] = [
 export default function App() {
 	return (
 		<div className='p-4'>
-			<FileTree items={fileStructure} />
+			<FileTree items={items} />
 		</div>
 	);
 }
