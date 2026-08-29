@@ -4,7 +4,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 
 ---
 
-## ✨ Features
+## Features
 
 - **Recursive Rendering**: Easily render nested directory and file hierarchies of arbitrary depth.
 - **Smooth Animations**: Animated expand/collapse transitions powered by `framer-motion`.
@@ -14,7 +14,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [React 18](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -26,7 +26,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -53,11 +53,11 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and `
    npm run dev
    ```
 
-4. Open your browser at the local URL provided by Vite (typically `http://localhost:5173`).
+4. Open your browser at the local URL provided by Vite (`http://localhost:5173/simple-recursive-tree/`).
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 To build and deploy the application to GitHub Pages:
 
@@ -69,7 +69,7 @@ This runs `predeploy` (`npm run build`) to type-check and generate production as
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command           | Description                                                 |
 | :---------------- | :---------------------------------------------------------- |
@@ -81,7 +81,7 @@ This runs `predeploy` (`npm run build`) to type-check and generate production as
 
 ---
 
-## 💻 Usage Example
+## Usage Example
 
 ```tsx
 import FileTree, { Item } from './components/ui/file-tree';
