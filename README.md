@@ -1,30 +1,88 @@
-# React + TypeScript + Vite
+# Simple Recursive Tree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive, and animated recursive file tree component built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Recursive Rendering**: Easily render nested directory and file hierarchies of arbitrary depth.
+- **Smooth Animations**: Animated expand/collapse transitions powered by `framer-motion`.
+- **Clean UI & Icons**: Crisp directory and file icons using `lucide-react`.
+- **Type-Safe**: Full TypeScript support with explicit data types for tree nodes.
+- **Customizable Styling**: Styled with Tailwind CSS for effortless customization.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
+- **Framework**: [React 18](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and `npm` installed.
+
+### Installation
+
+1. Clone the repository and navigate to the project directory:
+
+   ```bash
+   git clone https://github.com/petrirh1/simple-recursive-tree.git
+   cd simple-recursive-tree
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at the local URL provided by Vite (typically `http://localhost:5173`).
+
+---
+
+## 💻 Usage Example
+
+```tsx
+import FileTree, { Item } from './components/ui/file-tree';
+
+const fileStructure: Item[] = [
+	{
+		name: 'src',
+		type: 'folder',
+		children: [
+			{
+				name: 'components',
+				type: 'folder',
+				children: [{ name: 'file-tree.tsx', type: 'file' }],
+			},
+			{ name: 'App.tsx', type: 'file' },
+			{ name: 'main.tsx', type: 'file' },
+		],
+	},
+	{ name: 'package.json', type: 'file' },
+];
+
+export default function App() {
+	return (
+		<div className='p-4'>
+			<FileTree items={fileStructure} />
+		</div>
+	);
 }
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
