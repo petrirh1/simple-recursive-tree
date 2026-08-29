@@ -1,4 +1,4 @@
-import { ChevronRight, Folder, FileImage } from 'lucide-react';
+import { ChevronRight, Folder, FolderOpen, FileImage } from 'lucide-react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -30,6 +30,13 @@ const Item = ({ item }: { item: Item }) => {
 	const isFolder = () => item.type === 'folder';
 	const isFile = () => item.type === 'file';
 
+	const renderIcon = () => {
+		if (isFolder()) {
+			return isOpen ? <FolderOpen className='size-4' /> : <Folder className='size-4' />;
+		}
+		return <FileImage className='size-4 text-gray-500' />;
+	};
+
 	return (
 		<li key={item.name} className='mt-1.5 text-gray-700 dark:text-gray-400'>
 			<span
@@ -44,11 +51,7 @@ const Item = ({ item }: { item: Item }) => {
 						strokeWidth={3}
 					/>
 				)}
-				{isFolder() ? (
-					<Folder className='size-4' />
-				) : (
-					<FileImage className='size-4 text-gray-500' />
-				)}
+				{renderIcon()}
 				<p>{item.name}</p>
 			</span>
 			<AnimatePresence>
