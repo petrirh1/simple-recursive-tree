@@ -32,7 +32,11 @@ const Item = ({ item }: { item: Item }) => {
 
 	const renderIcon = () => {
 		if (isFolder()) {
-			return isOpen ? <FolderOpen className='size-4' /> : <Folder className='size-4' />;
+			return isOpen && isClickable() ? (
+				<FolderOpen className='size-4' />
+			) : (
+				<Folder className='size-4' />
+			);
 		}
 		return <FileImage className='size-4 text-gray-500' />;
 	};
