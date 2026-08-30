@@ -1,6 +1,6 @@
 # Simple Recursive Tree
 
-A modern, interactive, and animated recursive file tree component built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
+A modern, interactive, and animated recursive file tree component built with **React**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **Framer Motion**.
 
 ---
 
@@ -8,6 +8,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 
 - **Recursive Rendering**: Easily render nested directory and file hierarchies of arbitrary depth.
 - **Smooth Animations**: Animated expand/collapse transitions powered by `framer-motion`.
+- **shadcn/ui Architecture**: Built following shadcn/ui conventions with Radix primitives, CSS variable theming, and the `cn()` utility.
 - **Clean UI & Icons**: Crisp directory and file icons using `lucide-react`.
 - **Type-Safe**: Full TypeScript support with explicit data types for tree nodes.
 - **Customizable Styling**: Styled with Tailwind CSS for effortless customization.
@@ -19,6 +20,7 @@ A modern, interactive, and animated recursive file tree component built with **R
 - **Framework**: [React 18](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI / Primitives**: [shadcn/ui](https://ui.shadcn.com/) / [Radix UI](https://www.radix-ui.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
